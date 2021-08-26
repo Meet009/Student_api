@@ -22,3 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+curl commands
+
+* Access member data
+
+curl -XGET -H "Content-Type: application/json" http://localhost:3000/member-data
+
+* Register an account
+
+curl -XPOST -H "Content-Type: application/json" -d '{ "student": { "email": "test@example.com", "password": "12345678" } }' http://localhost:3000/students
+
+* Login with registered account
+
+curl -XPOST -i -H "Content-Type: application/json" -d '{ "student": { "email": "test@example.com", "password": "12345678" } }' http://localhost:3000/students/sign_in
